@@ -1,13 +1,15 @@
 .bio-lina {
     display: flex;
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    position: relative;
+
 }
 
 .bio-lina .desc {
-   margin-right: 15px;
+    margin-right: 15px;
 }
 
 #lina-picture {
@@ -42,22 +44,23 @@
     text-shadow: 1px 1px 1px #ffffff67;
 }
 
-
-
 @media screen and (max-width: 767px) {
     .bio-lina {
         flex-direction: column;
     }
+
     #lina-picture {
         margin: 0 auto;
         margin-bottom: 10px;
-        transition: width 0.5s, height 0.5s;
+
     }
+
     .obras-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .obras-box {
         position: relative;
         width: 300px;
@@ -72,19 +75,22 @@
     .bio-lina {
         flex-direction: row;
     }
+
     #lina-picture {
-        margin: 0;
-        margin-right: 20px;
+        margin: 5px;
         width: 80px;
         height: 80px;
         object-fit: cover;
-        transition: width 0.5s, height 0.5s;
+        border-radius: 100px;
+
     }
+
     .obras-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .obras-box {
         position: relative;
         width: 300px;
@@ -92,51 +98,63 @@
         border-radius: 10px;
         filter: blur(0px);
         margin: 10px;
-        
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    .obras-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+    }
+
     .obras-box {
         position: absolute;
         width: 300px;
         height: 300px;
-        margin: 10px;
         border-radius: 10px;
-        float: right;
+        top: 0px;
+        left: 0px;
     }
+
     .obras-box:first-child {
         transform: translate(10px, 10px);
         z-index: 1;
-        &:hover{
+
+        &:hover {
             z-index: 0;
             filter: blur(1px);
             animation: slideOut 0.5s linear forwards;
         }
+
         &:not(:hover) {
             animation: slide 0.5s linear forwards;
         }
     }
-    
+
     .obras-box:last-child {
         z-index: 0;
         filter: blur(1px);
-        &:hover{
+
+        &:hover {
             z-index: 1;
             filter: blur(0px);
             animation: slide 0.5s linear forwards;
         }
+
         &:not(:hover) {
             animation: slideOut 0.5s linear forwards;
         }
     }
-    
+
 }
 
 @keyframes slide {
     0% {
         transform: translate(0px, 0px);
     }
+
     100% {
         transform: translate(10px, 10px);
     }
@@ -146,7 +164,18 @@
     0% {
         transform: translate(10px, 10px);
     }
+
     100% {
         transform: translate(0px, 0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
