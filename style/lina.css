@@ -3,6 +3,11 @@
     padding: 10px;
     margin: 10px;
     border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.bio-lina .desc {
+   margin-right: 15px;
 }
 
 #lina-picture {
@@ -11,9 +16,8 @@
     border-radius: 100px;
     margin-right: 20px;
     object-fit: cover;
+    transition: width 0.5s, height 0.5s;
 }
-
-
 
 .obras-box img {
     width: 100%;
@@ -47,6 +51,7 @@
     #lina-picture {
         margin: 0 auto;
         margin-bottom: 10px;
+        transition: width 0.5s, height 0.5s;
     }
     .obras-container {
         display: flex;
@@ -73,6 +78,7 @@
         width: 80px;
         height: 80px;
         object-fit: cover;
+        transition: width 0.5s, height 0.5s;
     }
     .obras-container {
         display: flex;
