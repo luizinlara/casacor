@@ -8,15 +8,7 @@ const devs = [
         avatar: "https://avatars.githubusercontent.com/u/67771574",
         linkedinQR: "/src/qrcode/llinkedin-tonho.png",
         gitUser: "tonho991",
-        gitLink: ""
-    },
-    {
-        name: "Luis Lara",
-        desc: "Desenvolvedor",
-        avatar: "https://avatars.githubusercontent.com/u/62263833",
-        linkedinQR: "/src/qrcode/llinkedin-tonho.png",
-        gitUser: "luizinlara",
-        gitLink: ""
+        gitLink: "https://github.com/tonho991"
     }
 ]
 
@@ -34,11 +26,17 @@ function DevList(data) {
                     <div className="social-box">
                         <img src={dev.linkedinQR} id="qrcode" />
                     </div>
-                    <div className="social-box">
+                    <div className="social-box" onClick={()=>{
+                        window.location.href = dev.gitLink;
+                    }}>
                         <img src="/src/icons/github-mark-white.svg" alt="" />
                         <p>{dev.gitUser}</p>
                     </div>
                 </div>
             </div>
         ));
+}
+
+function loadUrl(url){
+    window.location.href = url;
 }
