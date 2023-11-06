@@ -136,7 +136,6 @@ html {
 
 .devs {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .user-box {
@@ -145,7 +144,8 @@ html {
     margin: 10px;
     align-items: center;
     border-radius: 10px;
-    box-shadow: 3px 3px 15px 5px #bdbdbd;
+    box-shadow: -3px 6px 15px 5px #bdbdbd;
+    transition: all 0.5s ease-in-out;
 }
 
 .user-box .info {
@@ -164,7 +164,7 @@ html {
     margin-right: 10px;
 }
 
-.social-box:nth-child(2){
+.social-box:nth-child(2) {
     display: flex;
     background: #1f1f1f;
     align-items: center;
@@ -173,10 +173,12 @@ html {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+
     & img {
         width: 30px;
         height: 30px;
     }
+
     & p {
         color: white;
         margin-left: 5px;
@@ -201,4 +203,26 @@ html {
 .user-box #logo {
     width: 100px;
     height: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .user-box .social {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .user-box #profile-img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+    }
+
+    .social-box:nth-child(2) {
+        margin-right: 0;
+    }
 }
