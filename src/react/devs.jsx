@@ -9,14 +9,6 @@ const devs = [
         linkedinQR: "/src/qrcode/llinkedin-tonho.png",
         gitUser: "tonho991",
         gitLink: "https://github.com/tonho991"
-    },
-    {
-        name: "Marco Antonio",
-        desc: "Redator",
-        avatar: "https://avatars.githubusercontent.com/u/67771574",
-        linkedinQR: "/src/qrcode/llinkedin-tonho.png",
-        gitUser: "tonho991",
-        gitLink: "https://github.com/tonho991"
     }
 ]
 

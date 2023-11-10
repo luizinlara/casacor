@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://casacor.abril.com.br/wp-content/uploads/sites/7/2020/09/Breaking-news-thumb-SC-2.jpg?quality=90&strip=info&w=1920&h=821&crop=1");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    overflow-y: visible;
+    user-select: none;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    grid: 1rem;
+    width: 400px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.274);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 12px;
+}
+form input {
+    margin-bottom: 10px;
+}
