@@ -19,8 +19,8 @@ function Top() {
         <div id="about-us">
             <h1>Sobre Nós</h1>
             <p>
-                &#160;A equipe formada por desenvolvedores front-end e back-end do SENAC liderada pelo professor Igor Carneiro,<br/>
-                criou um site para o Casa Cor com o tema "Corpo & Morada". Nosso objetivo foi <br/>
+                &#160;A equipe formada por desenvolvedores front-end e back-end do SENAC liderada pelo professor Igor Carneiro,<br />
+                criou um site para o Casa Cor com o tema "Corpo & Morada". Nosso objetivo foi <br />
                 unir tecnologia e design para explorar a relação entre o corpo humano e o espaço habitável.
             </p>
         </div>
@@ -58,7 +58,7 @@ function DevList() {
             name: "Marco Antonio",
             desc: "Redator",
             avatar: "https://avatars.githubusercontent.com/u/67771574",
-            linkedinQR: "https://i.postimg.cc/SKpZX8kk/llinkedin-tonho.png",
+            linkedinQR: "https://www.linkedin.com/in/marco-antonio-1b445b25b",
             gitUser: "tonho991",
             gitLink: "https://github.com/tonho991"
         }
@@ -72,13 +72,22 @@ function DevList() {
             </div>
             <div className="social">
                 <div className="social-box">
-                    <img src={dev.linkedinQR} id="qrcode" />
+                <qr-code
+                        id="qr1"
+                        contents={dev.linkedinQR}
+                        module-color="#000000"
+                        position-ring-color="#000000"
+                        position-center-color="#000000"
+                        mask-x-to-y-ratio="1.2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" slot="icon" />
+                    </qr-code>
                 </div>
                 <div className="social-box" onClick={() => {
                     window.location.href = dev.gitLink;
                 }}>
                     <img src="/src/img/icons/github-mark-white.svg" alt="" />
                     <p>{dev.gitUser}</p>
+                    
                 </div>
             </div>
         </div>
