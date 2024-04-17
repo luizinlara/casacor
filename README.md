@@ -27,7 +27,8 @@
 `docker exec -i database mysql -u casacor -p casacor -D casacor < banco_de_dados.sql`
 
 
-###Sobre
+### Sobre
+
 A equipe tinha como meta desenvolver um aplicativo web alinhado com os temas de 2023: a casa como lugar de subjetividade, maternal, permanência e conhecimento, considerando também tendências de comportamento que afetam o estilo de vida contemporâneo.
 
 O design do projeto foi pensado para ser um local de moradia, com espaços limpos e harmoniosos.
