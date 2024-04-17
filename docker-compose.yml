@@ -24,7 +24,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./:/var/www/html
+      - ./app:/var/www/html
     links:
       - db
 volumes:
