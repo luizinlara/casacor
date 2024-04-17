@@ -1,0 +1,99 @@
+body {
+  background-color:  #cfcdcd;
+  font-family: "Courier New", Courier, monospace;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header,
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #343434;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #f78b1f;
+}
+
+.slide {
+  background-image: url("../img/slide_senac.jpg");
+  background-repeat: no-repeat;
+  height: 300px;
+  background-position: center;
+  padding: 5%;
+}
+
+.slide > h2 {
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.slide > h4 {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.color-orange {
+  color: #f78b1f;
+}
+.color-white {
+  color: #fff;
+}
+
+section > h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre {
+  background: #003466;
+  padding: 10%;
+}
+
+.btn {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.btn-orange {
+  background: #f78b1f;
+  color: #fff;
+  font-weight: 700;
+}
+
+.gatruidade {
+  padding: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.w-500{
+    max-width: 500px;
+}

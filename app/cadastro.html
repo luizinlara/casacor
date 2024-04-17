@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta name="theme-color" content="#F7B614">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Casacor</title>
+    <!--    <link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">-->
+    <!--    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">-->
+    <!--    <link href="//fonts.googleapis.com/css?family=Inria+Serif:300,400,600,700,800&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="assets/css/cropper.min.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <meta name="theme-color" content="#396e47">
+</head>
+
+<body>
+
+
+<section class="signup-step-container background-transparent">
+    <div class="container-fluid ">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-12">
+                <div class="wizard">
+                    <div class="wizard-inner">
+                        <div class="connecting-line"></div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab"
+                                   aria-expanded="true"><span class="round-tab">1 </span> <i>Sobre</i></a>
+                            </li>
+                            <li role="presentation" class="disabled">
+                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab"
+                                   aria-expanded="false"><span class="round-tab">2</span> <i> 1º Imagem</i></a>
+                            </li>
+                            <li role="presentation" class="disabled">
+                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span
+                                        class="round-tab">3</span> <i> 2º Imagem</i></a>
+                            </li>
+                            <li role="presentation" class="disabled">
+                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"><span
+                                        class="round-tab">4</span> <i> 3º Imagem</i></a>
+                            </li>
+                            <li role="presentation" class="disabled">
+                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"><span
+                                        class="round-tab">5</span> <i>Revisar</i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="formularioDiv">
+                        <form role="form" method="post" action="./backend/api.php" class="login-box" id="myForm">
+                            <input type="hidden" name="cripImage1">
+                            <input type="hidden" name="cripImage2">
+                            <input type="hidden" name="cripImage3">
+                            <div class="tab-content" id="main_form">
+                                <div class="tab-pane active" role="tabpanel" id="step1">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input class="form-control" type="tel" name="celular"
+                                                       placeholder="Digite seu celular">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input class="form-control letras" type="text" name="name"
+                                                       placeholder="Digite seu nome" maxlength="20">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" name="empresa"
+                                                       placeholder="Cargo ou nome da empresa" maxlength="20">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                            <button type="button" class="default-btn next-step">Próximo</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane" role="tabpanel" id="step2">
+                                    <h4 class="text-center">Selecione uma imagem</h4>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="1"
+                                                       accept="image/png, image/jpeg" data-width="611"
+                                                       data-height="361">
+                                                <label class="custom-file-label" for="1">Selecionar Imagem</label>
+                                            </div>
+                                            <!-- Container para a imagem e o Cropper.js -->
+                                            <div id="imageContainer1">
+                                                <img id="image1">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-inline pull-right pt-5">
+                                        <li>
+                                            <button type="button" class="default-btn prev-step">Voltar</button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="default-btn next-step" id="cropButton1">Próximo
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane" role="tabpanel" id="step3">
+                                    <h4 class="text-center">Selecione uma imagem</h4>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="2"
+                                                       accept="image/png, image/jpeg" data-width="250"
+                                                       data-height="320">
+                                                <label class="custom-file-label" for="1">Selecionar Imagem</label>
+                                            </div>
+                                            <!-- Container para a imagem e o Cropper.js -->
+                                            <div id="imageContainer2">
+                                                <img id="image2">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                            <button type="button" class="default-btn prev-step">Voltar</button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="default-btn next-step" id="cropButton2">Próximo
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane" role="tabpanel" id="step4">
+                                    <h4 class="text-center">Selecione uma imagem</h4>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="3"
+                                                       accept="image/png, image/jpeg" data-width="321"
+                                                       data-height="318">
+                                                <label class="custom-file-label" for="1">Selecionar Imagem</label>
+                                            </div>
+                                            <!-- Container para a imagem e o Cropper.js -->
+                                            <div id="imageContainer3">
+                                                <img id="image3">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                            <button type="button" class="default-btn prev-step">Voltar</button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="default-btn next-step" id="cropButton3">Próximo
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane" role="tabpanel" id="step5">
+                                    <div class="row all-info-container">
+                                        <div class="text-center">
+                                            <p>Confira a baixo uma prévia de sua publicação.</p>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <img src="" id="img1" class="w-100 shadowslide"
+                                                         alt="Arte" style="width: 100%!important;"/>
+                                                </div>
+                                                <div class="col-lg-6 p-5">
+                                                    <h3 class="slideh3" id="nomeCliente">
+
+                                                    </h3>
+                                                    <p id="cargoCliente"></p>
+                                                    <div class="hrdiv pt-5 pb-2">
+                                                        <h3 class="color-e"><b>Casa</b>cor - Corpo e Morada</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-lg-2">
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <img src="" id="img2" class="w-100 shadowslide img"
+                                                         alt="Arte" style="width: 100%!important;"/>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <img src="" id="img3" class="w-100 shadowslide"
+                                                         alt="Arte" style="width: 100%!important;"/>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="div-circles">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                            <button type="button" class="default-btn prev-step">Voltar</button>
+                                        </li>
+                                        <li>
+                                            <button type="submit" class="default-btn next-step" id="finalizar">Cadastrar
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/cropper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.mask.min.js"></script>
+<script src="assets/js/cadastro.js"></script>
+<script type="text/javascript">
+    // Bloquear o zoom da página
+    document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+    });
+</script>
+
+</body>
+</html>

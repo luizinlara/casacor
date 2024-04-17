@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Bloqueia solicitações que não são GET ou POST
+    RewriteCond %{REQUEST_METHOD} !^(GET|POST)$
+    RewriteRule ^ - [F]
+
+    # Permite acesso ao arquivo api.php
+    <Files "api.php">
+        Require all granted
+    </Files>
+
+    # Bloqueia todas as requisições para outros arquivos
+    <FilesMatch "^(?!api\.php$)">
+        Require all denied
+    </FilesMatch>
+</IfModule>
