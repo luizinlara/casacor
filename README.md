@@ -5,17 +5,17 @@
 
 
 
-###Apresentações realizas em sala de aula:
+### Apresentações realizas em sala de aula:
 * [Ferramentas da WEB](https://github.com/luizinlara/casacor/blob/main/APRESENTA%C3%87%C3%95ES/Versionamento-git.pdf)
 * [Ferramentas de IDE](https://github.com/luizinlara/casacor/blob/main/APRESENTA%C3%87%C3%95ES/Ferramentas-IDE.pdf)
 * [Versionamento GIT](https://github.com/luizinlara/casacor/blob/main/APRESENTA%C3%87%C3%95ES/Ferramentas-da-web.pdf)
 
 
-###Projeto desenvolvido
+### Projeto desenvolvido
 * [Frontend](https://github.com/luizinlara/casacor/tree/main/app)
 * [Backend](https://github.com/luizinlara/casacor/tree/main/app/backend)
 
-###Requisitos
+### Requisitos
 
 - Docker
 
