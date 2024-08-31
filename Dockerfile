@@ -17,7 +17,7 @@ RUN a2enmod rewrite
 
 
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
-COPY . /var/www/html
+COPY ./app /var/www/html
 
 EXPOSE 80
 CMD ["apache2-foreground"]
