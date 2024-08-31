@@ -44,7 +44,7 @@ function atualizarCarrossel(data) {
 
 function atualizarDados() {
     $('.carousel-inner').html('')
-    fetch('https://gardentec.000webhostapp.com/backend/api.php')
+    fetch('/backend/api.php')
         .then(response => response.json())
         .then(data => {
             atualizarCarrossel(data);

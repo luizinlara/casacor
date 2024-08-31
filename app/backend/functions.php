@@ -14,7 +14,7 @@ class CasaCor
         
 
         $this->conn = new mysqli(
-            'database',
+            'casacor-database',
             'casacor',
             'casacor',
             'casacor',

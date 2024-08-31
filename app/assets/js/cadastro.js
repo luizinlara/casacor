@@ -101,7 +101,7 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(this);
 
-    fetch('https://gardentec.000webhostapp.com/backend/api.php', {
+    fetch('/backend/api.php', {
         method: 'POST',
         body: formData
     })
