@@ -18,7 +18,7 @@ class CasaCor
             'casacor',
             'casacor',
             'casacor',
-            '3306'
+            '3307'
         );
         if ($this->conn->connect_error) throw new Exception("Erro de conexão: " . $this->conn->connect_error);
     }
